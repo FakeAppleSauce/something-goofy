@@ -1,6 +1,6 @@
 var mobileMode = true;
 
-scene('StartingScreen', () => {
+/**scene('StartingScreen', () => {
   add([
     rect(width(), height()),
     color(100, 20, 200),
@@ -23,7 +23,7 @@ scene('StartingScreen', () => {
       mobileMode = true;
     };
   });
-});
+});*/
 
 scene('game', () => {
   const apple = add([
@@ -41,4 +41,4 @@ scene('game', () => {
   });
 });
 
-go('StartingScreen');
+go('game');
