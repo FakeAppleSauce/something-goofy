@@ -9,7 +9,7 @@ scene('StartingScreen', () => {
   add([
     rect(SCALE/64, SCALE/64),
     color(100, 20, 50),
-    pos(SCALE*20, SCALE*20),
+    pos(SCALE*13, SCALE*13),
     area(),
     'VersionButton'
   ]);
