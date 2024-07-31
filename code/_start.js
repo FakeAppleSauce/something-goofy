@@ -4,8 +4,8 @@ let ww = window.innerWidth;let wh = window.innerHeight;let kaboomDimensions = {}
 
 kaboom({
   background: [255,255,255],
-  width: kaboomDimensions.w,
-  height: kaboomDimensions.h,
+  width: window.innerWidth,
+  height: window.innerHeight,
   inspectColor: [255,255,255],
   pixelDensity: 1,
   crisp: true,
