@@ -4,6 +4,7 @@ scene('StartingScreen', () => {
   add([
     rect(width(), height()),
     color(100, 20, 200),
+    layer(1),
   ]);
   
   add([
@@ -11,6 +12,7 @@ scene('StartingScreen', () => {
     color(100, 20, 50),
     pos(SCALE*13, SCALE*13),
     area(),
+    layer(2),
     'VersionButton'
   ]);
 
