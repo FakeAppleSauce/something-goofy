@@ -1,8 +1,8 @@
-var MobileMode = true;
+var mobileMode = true;
 
-Scene('StartingScreen', () => {
+scene('StartingScreen', () => {
   add([
-    rect(window.innerWidth, window.innerHeight),
+    rect(width(), height()),
     color(100, 20, 200),
   ]);
   
@@ -15,10 +15,10 @@ Scene('StartingScreen', () => {
   ]);
 
   onClick('VersionButton', () => {
-    if (MobileMode == true) {
-      MobileMode = false;
+    if (mobileMode == true) {
+      mobileMode = false;
     } else {
-      MobileMode = true;
+      mobileMode = true;
     };
   });
 });
