@@ -1,6 +1,6 @@
 var MobileMode = true;
 
-Scene('startingScreen', () => {
+Scene('StartingScreen', () => {
   add([
     rect(window.innerWidth, window.innerHeight),
     color(100, 20, 200),
