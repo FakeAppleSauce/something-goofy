@@ -1,3 +1,27 @@
+var MobileMode = true;
+
+Scene('startingScreen', () => {
+  add([
+    rect(window.innerWidth, window.innerHeight),
+    color(100, 20, 200),
+  ]);
+  
+  add([
+    rect(SCALE/64, SCALE/64),
+    color(100, 20, 50),
+    pos((SCALE/100)*70, (SCALE/100)*20)
+    'VersionButton'
+  ]);
+
+  onClick('VersionButton', () => {
+    if (MobileMode == true) {
+      MobileMode = false
+    } else {
+      MobileMode = true
+    }
+  }
+});
+
 scene('game', () => {
   const apple = add([
     sprite('apple'),
@@ -14,4 +38,4 @@ scene('game', () => {
   });
 });
 
-go('game');
+go('StartingScreen');
