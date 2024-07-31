@@ -20,7 +20,7 @@ Scene('StartingScreen', () => {
     } else {
       MobileMode = true;
     };
-  };
+  });
 });
 
 scene('game', () => {
