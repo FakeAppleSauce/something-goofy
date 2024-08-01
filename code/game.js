@@ -1,6 +1,6 @@
 var mobileMode = true;
 
-/**scene('StartingScreen', () => {
+scene('startingScreen', () => {
   add([
     rect(width(), height()),
     color(100, 20, 200),
@@ -8,22 +8,35 @@ var mobileMode = true;
   ]);
   
   add([
-    rect(SCALE/2, SCALE/2),
+    rect(SCALE, SCALE/2),
     color(100, 20, 50),
-    pos(SCALE*13, SCALE*13),
+    pos(SCALE*3, SCALE*13),
     area(),
     z(2),
-    'VersionButton'
+    'versionButton'
+  ]);
+  
+  add([
+    rect(SCALE, SCALE/2),
+    color(10, 200, 10),
+    pos(SCALE*10, SCALE*13),
+    area(),
+    z(2),
+    'startButton'
   ]);
 
-  onClick('VersionButton', () => {
+  onClick('versionButton', () => {
     if (mobileMode == true) {
       mobileMode = false;
     } else {
       mobileMode = true;
     };
   });
-});*/
+
+  onClick('startButton', () => {
+    go('game');
+  });
+});
 
 scene('game', () => {
   const apple = add([
@@ -32,8 +45,11 @@ scene('game', () => {
     scale((SCALE/64) * 3), // SCALE divided by sprite width, multiplied by the size change
     rotate(0),
     anchor('center'),
-
   ]);
+
+  if (mobileMode == true) {
+    //add movement buttons
+  }
 
   onUpdate(() => {
     apple.angle += dt()*150;
@@ -41,4 +57,4 @@ scene('game', () => {
   });
 });
 
-go('game');
+go('startingScreen');
